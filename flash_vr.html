@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flashing VR Experience</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <style>
+        .flash {
+            animation: flashAnimation 1s infinite;
+        }
+
+        @keyframes flashAnimation {
+            50% { background-color: red; }
+        }
+    </style>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <audio id="backgroundMusic" src="your_music_file.mp3" autoplay loop="true"></audio>
+        </a-assets>
+
+        <!-- Flashing red and black box -->
+        <a-box position="0 1.25 -5" rotation="0 45 0" color="black" class="flash"></a-box>
+    </a-scene>
+
+    <script>
+        // JavaScript to control the flashing if needed
+    </script>
+</body>
+</html>
